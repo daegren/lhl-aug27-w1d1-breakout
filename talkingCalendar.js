@@ -46,16 +46,14 @@ var talkingCalendar = function(date) {
   var month = parseInt(components[1], 10);
   var day = parseInt(components[2], 10);
 
-  console.log(year, month, day);
-
   var monthString = parseMonth(month);
 
-  console.log(monthString);
-
   var suffix = daySuffix(day);
-  console.log(suffix);
+
+  var dateString = monthString + " " + day + suffix + ", " + year;
+  return dateString;
 };
 
 console.log(talkingCalendar("2017/12/02"));
-// console.log(talkingCalendar("2007/11/11"));
-// console.log(talkingCalendar("1987/08/24"));
+console.log(talkingCalendar("2007/11/11"));
+console.log(talkingCalendar("1987/08/24"));
